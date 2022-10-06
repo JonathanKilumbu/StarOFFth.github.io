@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.css">
+</head>
+<style>
+    .myDiv {
+      background-color: rgb(53, 38, 218);    
+    }
+    h1 {
+        text-align: center;
+        }
+    body{
+    background-color:rgb(115, 117, 117);
+    font-family:Arial;
+    }
+</style>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body>
+    <script src ="bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+    <div class="myDiv">
+        <h1 style="color:white;">Contact Us</h1>
+    </div>
+    <form action ="results.html" class="main form needs-validation was-validated" method ="get" style="width: 500px; margin: auto" novalidate>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputFirstName">Name</label>
+            <input type="First" class="form-control" id="inputFirstName" placeholder="First" name="fName" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLastName"></label>
+            <input type="Last" class="form-control" id="inputLastName" placeholder="Last" name="lName" required>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputAddress">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Textarea1">Message</label>
+            <textarea class="form-control" id="Textarea1" placeholder="Message" rows="3" name="message" ></textarea>
+          </div>
+        <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-3 pt-4 fs-2">Priority</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Priority" id="gridRadios1" value="Low" checked>
+                  <label class="form-check-label" for="gridRadios1">
+                    Low
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Priority" id="gridRadios2" value="Medium">
+                  <label class="form-check-label" for="gridRadios2">
+                    Medium
+                  </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Priority" id="gridRadios3" value="High">
+                    <label class="form-check-label" for="gridRadios3">
+                      High
+                    </label>
+                  </div>
+        <button type="submit" class="btn btn-primary">Submit Form</button>
+      </form>
+      <script>
+        var form = document.querySelector('.needs-validation')
+
+        form.addEventListener('submit',function(event){
+            if (form.checkValidity() === false){
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        })
+      </script>
+    
+</body>
+</html>
